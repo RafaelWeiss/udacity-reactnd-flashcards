@@ -1,0 +1,34 @@
+{
+    "label": {
+      "newCard": "New Card",
+      "question":"Question",
+      "answer":"Answer",
+      "youScoreIs": "Your score is", 
+      "numberCards": "{{cards}} card(s)",
+      "quiz": "Quiz",
+      "card": "Card",
+      "cards": "Cards"
+    },
+    "button": {
+      "newCard": "New Card",
+      "newDeck": "New Deck",
+      "addCard": "Add Card",
+      "flashcards": "Flashcards",
+      "save": "Save",
+      "startQuiz": "Start Quiz",
+      "restartQuiz": "Restart Quiz",
+      "backToDeck": "Back",
+      "correct" : "Correct",
+      "incorrect" : "Incorrect",
+      "showAnswer" : "Show Answer",
+      "showQuestion" : "Show Question"
+    },
+    "msg": {
+      "sucesss": "New Card",
+      "newDeck":"New Deck"
+    },
+    "placeholder": {
+      "name": "Name"
+        
+    }
+}
