@@ -1,7 +1,6 @@
 [![REACT nanodegree](https://img.shields.io/badge/udacity-REACTND-02b3e4.svg?style=flat)](https://www.udacity.com/course/react-nanodegree--nd019)
 
 ## udacity-reactnd-flashcards
-Udacity React Nanodegree Program: Mobile Flashcards Project
 
 A app created by using React Native. Users create decks of cards, which has a question and an answer. Users may then quiz themselves using said decks. An optional daily notification may be sent to the user at a certain time.
 
