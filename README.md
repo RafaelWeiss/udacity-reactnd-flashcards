@@ -5,7 +5,7 @@ Udacity React Nanodegree Program: Mobile Flashcards Project
 
 A app created by using React Native. Users create decks of cards, which has a question and an answer. Users may then quiz themselves using said decks. An optional daily notification may be sent to the user at a certain time.
 
-## Versions
+## Installing
 
 Clone the repo
 
