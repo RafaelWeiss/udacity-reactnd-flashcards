@@ -82,15 +82,15 @@ class Quiz extends Component {
                             {showAnswer ? (
                                 <View style={styles.contentActions}>
                                     <Button
-                                        onPress={this.handleIncorrect}
-                                        variant="secondary"
-                                        title={i18n.t('button.incorrect')}
-                                        buttonStyle={styles.button}
-                                    />
-                                    <Button
                                         onPress={this.handleCorrect}
                                         title={i18n.t('button.correct')}
                                         buttonStyle={styles.button}
+                                    />
+                                    <Button
+                                        onPress={this.handleIncorrect}
+                                        variant="secondary"
+                                        title={i18n.t('button.incorrect')}
+                                        buttonStyle={styles.buttonDanger}
                                     />
                                 </View>
                             ) : (

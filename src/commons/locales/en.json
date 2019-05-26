@@ -13,6 +13,7 @@
       "newCard": "New Card",
       "newDeck": "New Deck",
       "addCard": "Add Card",
+      "removeDeck" : "Remove Deck",
       "flashcards": "Flashcards",
       "save": "Save",
       "startQuiz": "Start Quiz",
@@ -25,7 +26,8 @@
     },
     "msg": {
       "sucesss": "New Card",
-      "newDeck":"New Deck"
+      "newDeck":"New Deck",
+      "cardNotFound":"Card not found"
     },
     "placeholder": {
       "name": "Name"

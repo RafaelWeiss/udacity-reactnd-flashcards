@@ -2,7 +2,7 @@
 
 import { StyleSheet } from 'react-native';
 import { Constants } from 'expo';
-import { backgroundColor , whiteColor} from '../styles/colors';
+import { backgroundColor , whiteColor, dangerColor} from '../styles/colors';
 
 module.exports = StyleSheet.create({
     content: {
@@ -44,6 +44,10 @@ module.exports = StyleSheet.create({
     },
     button: {
         marginTop: 20
+    },
+    buttonDanger: {
+        marginTop: 20,
+        backgroundColor: dangerColor
     },
     displayFlex: {
         display: 'flex'

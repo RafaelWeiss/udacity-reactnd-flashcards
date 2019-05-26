@@ -4,7 +4,7 @@ import storage from 'redux-persist/lib/storage';
 import rootReducer from './reducers';
 
 const persistConfig = {
-    key: 'flashcards7:store',
+    key: 'udacityreactndflashcards:store',
     storage
 };
 

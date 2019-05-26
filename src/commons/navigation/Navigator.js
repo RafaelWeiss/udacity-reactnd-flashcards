@@ -10,7 +10,10 @@ import { blackColor, whiteColor } from '../styles/colors';
 export default StackNavigator(
     {
         Main: {
-            screen: Tabs
+            screen: Tabs,
+            navigationOptions: {
+                headerLeft: null
+            }
         },
         Deck: {
             screen: Deck
@@ -18,7 +21,7 @@ export default StackNavigator(
         CardForm: {
             screen: CardForm,
             navigationOptions: {
-                title:  i18n.t('label.newCard')
+                title: i18n.t('label.newCard')
             }
         },
         Quiz: {

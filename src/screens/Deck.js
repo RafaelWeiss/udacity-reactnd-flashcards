@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { View, Text } from 'react-native';
 import { Button } from 'react-native-elements';
 
-import { selectors } from '../store/decks';
+import { actions as decksActions, selectors } from '../store/decks';
 
 import Container from '../commons/container';
 import styles from '../commons/styles';
@@ -20,7 +20,8 @@ class Deck extends PureComponent {
     };
 
     static propTypes = {
-        deck: PropTypes.object
+        deck: PropTypes.object,
+        removeDeck: PropTypes.func.isRequired
     };
 
     handleAddCard = () => {
@@ -33,6 +34,12 @@ class Deck extends PureComponent {
         navigation.navigate('Quiz', { deck: deck.title });
     };
 
+    handleRemoveDeck = () => {
+        const { navigation, deck } = this.props;
+        this.props.removeDeck(deck);
+        navigation.navigate('Main');
+    };
+
     render() {
         const { deck } = this.props;
 
@@ -41,12 +48,14 @@ class Deck extends PureComponent {
                 {deck && (
                     <View style={styles.content}>
                         <Text style={styles.title}>{deck.title}</Text>
-                        <Text style={styles.subtitle}>{`${deck.questions.length} `}{deck.questions.length > 1 ? i18n.t('label.cards') : i18n.t('label.card')}</Text>
+                        <Text style={styles.subtitle}>
+                            {`${deck.questions.length} `}
+                            {deck.questions.length > 1 ? i18n.t('label.cards') : i18n.t('label.card')}
+                        </Text>
                         <View style={styles.contentActions}>
                             <Button
                                 onPress={this.handleAddCard}
-                                variant="secondary"
-                                title={i18n.t('button.addCard')}
+                                 title={i18n.t('button.addCard')}
                                 buttonStyle={styles.button}
                             />
                             <Button
@@ -55,7 +64,17 @@ class Deck extends PureComponent {
                                 title={i18n.t('button.startQuiz')}
                                 buttonStyle={styles.button}
                             />
+                            <Button
+                                onPress={this.handleRemoveDeck}
+                                title={i18n.t('button.removeDeck')}
+                                buttonStyle={styles.buttonDanger}
+                            />
                         </View>
+                    </View>
+                )}
+                {!deck && (
+                    <View style={styles.content}>
+                        <Text style={styles.title}>{i18n.t('msg.cardNotFound')}</Text>
                     </View>
                 )}
             </Container>
@@ -71,4 +90,11 @@ function mapStateToProps(state, ownProps) {
     };
 }
 
-export default connect(mapStateToProps)(Deck);
+const mapDispatchToProps = {
+    removeDeck: decksActions.removeDeck
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Deck);
